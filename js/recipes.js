@@ -367,7 +367,7 @@ const recipes = [
         ],
         tags: ["pizza", "lievitati"],
         notes: [
-            "**Stampo:** Ho usato una teglia da 28cm tonda con un panetto da 550 grammi, esce mediamente alta. Stampi che condicano poco o male il calore lasciano il fondo unto e non croccante.",
+            "**Stampo:** Ho usato una teglia da 28cm tonda con un panetto da 550 grammi, esce mediamente alta. Stampi che conducono poco o male il calore lasciano il fondo unto e non croccante.",
         ]
     }
 ];
