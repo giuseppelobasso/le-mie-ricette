@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricetta - Le Mie Ricette</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html" class="recipe-page-back">
+                        <span>←</span> Tutte le ricette
+                    </a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="recipe-page" id="recipePage">
+            <!-- Contenuto caricato da JavaScript -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Le Mie Ricette - Il mio ricettario personale</p>
+        </div>
+    </footer>
+
+    <script src="../js/recipes.js"></script>
+    <script>
+        // === Get Recipe ID from URL ===
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipeId = parseInt(urlParams.get('id'));
+        
+        // === DOM Elements ===
+        const recipePage = document.getElementById('recipePage');
+        const themeToggle = document.getElementById('themeToggle');
+        
+        // === Theme Toggle ===
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+        
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+        
+        function updateThemeIcon(theme) {
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // === Load Recipe ===
+        function loadRecipe() {
+            if (!recipeId) {
+                recipePage.innerHTML = `
+                    <div class="no-results">
+                        <span class="no-results-icon">❌</span>
+                        <p>Nessuna ricetta specificata</p>
+                        <a href="../index.html" class="btn-reset">Torna alle ricette</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            const recipe = recipes.find(r => r.id === recipeId);
+            
+            if (!recipe) {
+                recipePage.innerHTML = `
+                    <div class="no-results">
+                        <span class="no-results-icon">❌</span>
+                        <p>Ricetta non trovata</p>
+                        <a href="../index.html" class="btn-reset">Torna alle ricette</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Update page title
+            document.title = `${recipe.title} - Le Mie Ricette`;
+            document.querySelector('meta[name="description"]').content = recipe.description;
+            
+            // Render recipe
+            recipePage.innerHTML = `
+                <div class="recipe-page-header">
+                    <a href="../index.html" class="recipe-page-back">
+                        <span>←</span> Tutte le ricette
+                    </a>
+                    <h1 class="recipe-page-title">${recipe.title}</h1>
+                    <div class="recipe-page-meta">
+                        <span class="recipe-meta-item">
+                            <span>⏱️</span> ${recipe.time} minuti
+                        </span>
+                        <span class="recipe-meta-item">
+                            <span>👨‍👩‍👧‍👦</span> ${recipe.servings} porzioni
+                        </span>
+                        <span class="recipe-meta-item">
+                            <span>📊</span> ${recipe.difficulty.charAt(0).toUpperCase() + recipe.difficulty.slice(1)}
+                        </span>
+                        <span class="recipe-meta-item">
+                            <span>🏷️</span> ${recipe.category.charAt(0).toUpperCase() + recipe.category.slice(1)}
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="recipe-page-image">${recipe.image}</div>
+                
+                <div class="recipe-page-section">
+                    <h3>Ingredienti</h3>
+                    <ul class="ingredients-list">
+                        ${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="recipe-page-section">
+                    <h3>Procedimento</h3>
+                    <ol class="instructions-list">
+                        ${recipe.instructions.map(step => `<li>${step}</li>`).join('')}
+                    </ol>
+                </div>
+                
+                ${recipe.tags.length > 0 ? `
+                    <div class="recipe-page-section">
+                        <h3>Tags</h3>
+                        <div class="filter-buttons">
+                            ${recipe.tags.map(tag => `<span class="filter-btn">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+            `;
+        }
+        
+        // === Event Listeners ===
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // === Initialize ===
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            loadRecipe();
+        });
+    </script>
+</body>
+</html>

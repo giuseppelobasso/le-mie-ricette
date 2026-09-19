@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Mie Ricette - Il Mio Ricettario Personale</title>
+    <meta name="description" content="Collezione personale di ricette preferite. Cerca e scopri le migliori ricette per ogni occasione.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🍳</span>
+                    <h1>Le Mie Ricette</h1>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h2>Il mio ricettario personale</h2>
+                <p>Ricette provate e riprovate, perfette per ogni occasione</p>
+            </section>
+
+            <section class="filters-section">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cerca una ricetta..." aria-label="Cerca ricetta">
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Categoria</label>
+                        <div class="filter-buttons" id="categoryFilters">
+                            <button class="filter-btn active" data-category="tutte">Tutte</button>
+                            <button class="filter-btn" data-category="antipasto">Antipasti</button>
+                            <button class="filter-btn" data-category="primo">Primi</button>
+                            <button class="filter-btn" data-category="secondo">Secondi</button>
+                            <button class="filter-btn" data-category="dolce">Dolci</button>
+                            <button class="filter-btn" data-category="contorno">Contorni</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Tempo di preparazione</label>
+                        <div class="filter-buttons" id="timeFilters">
+                            <button class="filter-btn active" data-time="tutte">Tutte</button>
+                            <button class="filter-btn" data-time="30">Under 30 min</button>
+                            <button class="filter-btn" data-time="60">30-60 min</button>
+                            <button class="filter-btn" data-time="61">Oltre 60 min</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Difficoltà</label>
+                        <div class="filter-buttons" id="difficultyFilters">
+                            <button class="filter-btn active" data-difficulty="tutte">Tutte</button>
+                            <button class="filter-btn" data-difficulty="facile">Facile</button>
+                            <button class="filter-btn" data-difficulty="media">Media</button>
+                            <button class="filter-btn" data-difficulty="difficile">Difficile</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recipes-section">
+                <div class="recipes-header">
+                    <h3 id="recipesTitle">Tutte le ricette</h3>
+                    <span class="recipes-count" id="recipesCount"></span>
+                </div>
+                <div class="recipes-grid" id="recipesGrid">
+                    <!-- Le ricette verranno caricate da JavaScript -->
+                </div>
+                <div class="no-results" id="noResults" style="display: none;">
+                    <span class="no-results-icon">🍽️</span>
+                    <p>Nessuna ricetta trovata con i filtri selezionati</p>
+                    <button class="btn-reset" id="resetFilters">Resetta filtri</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Le Mie Ricette - Il mio ricettario personale</p>
+        </div>
+    </footer>
+
+    <script src="js/recipes.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
