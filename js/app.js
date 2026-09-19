@@ -104,9 +104,14 @@ function renderRecipes() {
     }
     
     // Render cards
-    recipesGrid.innerHTML = filteredRecipes.map(recipe => `
+    recipesGrid.innerHTML = filteredRecipes.map(recipe => {
+        const isImage = /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(recipe.image);
+        const imageContent = isImage
+            ? `<img src="${recipe.image}" alt="${recipe.title}" loading="lazy">`
+            : recipe.image;
+        return `
         <article class="recipe-card" data-id="${recipe.id}">
-            <div class="recipe-card-image">${recipe.image}</div>
+            <div class="recipe-card-image">${imageContent}</div>
             <div class="recipe-card-content">
                 <span class="recipe-card-category">${recipe.category}</span>
                 <h4 class="recipe-card-title">${recipe.title}</h4>
@@ -124,7 +129,8 @@ function renderRecipes() {
                 </div>
             </div>
         </article>
-    `).join('');
+        `;
+    }).join('');
     
     // Add click handlers
     document.querySelectorAll('.recipe-card').forEach(card => {

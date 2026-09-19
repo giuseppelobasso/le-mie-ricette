@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 
-                <div class="recipe-page-image">${recipe.image}</div>
+                <div class="recipe-page-image">${/\.(jpg|jpeg|png|webp|gif|svg)$/i.test(recipe.image) ? `<img src="${recipe.image}" alt="${recipe.title}">` : recipe.image}</div>
                 
                 <div class="recipe-page-section">
                     <h3>Ingredienti</h3>
