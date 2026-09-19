@@ -43,7 +43,7 @@ const recipes = [
     {
         id: 2,
         title: "Crema Pasticcera",
-        category: "contorno",
+        category: "base",
         time: 20,
         difficulty: "facile",
         servings: 6,
@@ -79,7 +79,7 @@ const recipes = [
     {
         id: 3,
         title: "Padellino Torinese",
-        category: "antipasto",
+        category: "lievitati",
         time: 120,
         difficulty: "media",
         servings: 4,
@@ -111,7 +111,7 @@ const recipes = [
     {
         id: 4,
         title: "Pala Farcita",
-        category: "antipasto",
+        category: "lievitati",
         time: 150,
         difficulty: "media",
         servings: 4,
@@ -138,7 +138,7 @@ const recipes = [
     {
         id: 5,
         title: "Pan di Spagna",
-        category: "contorno",
+        category: "base",
         time: 45,
         difficulty: "media",
         servings: 6,
@@ -210,7 +210,7 @@ const recipes = [
     {
         id: 7,
         title: "Pizzette del Fornaio",
-        category: "antipasto",
+        category: "lievitati",
         time: 180,
         difficulty: "media",
         servings: 6,
@@ -238,7 +238,7 @@ const recipes = [
     {
         id: 8,
         title: "Shokupan",
-        category: "primo",
+        category: "lievitati",
         time: 360,
         difficulty: "difficile",
         servings: 4,
@@ -271,7 +271,7 @@ const recipes = [
     {
         id: 9,
         title: "Teglia Romana",
-        category: "antipasto",
+        category: "lievitati",
         time: 720,
         difficulty: "media",
         servings: 4,
