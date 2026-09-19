@@ -86,9 +86,8 @@ function renderRecipes() {
         const categoryNames = {
             'antipasto': 'Antipasti',
             'primo': 'Primi',
-            'secondo': 'Secondi',
             'dolce': 'Dolci',
-            'contorno': 'Contorni'
+            'contorno': 'Basi'
         };
         recipesTitle.textContent = categoryNames[currentCategory] || 'Tutte le ricette';
     } else {
