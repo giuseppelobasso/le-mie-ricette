@@ -368,6 +368,31 @@ body {
     background: var(--accent-hover);
 }
 
+/* === Notes === */
+.notes-list {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.note-item {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+    color: var(--text-secondary);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border);
+}
+
+.note-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.note-item strong {
+    color: var(--text-primary);
+}
+
 /* === Footer === */
 .footer {
     background: var(--bg-secondary);

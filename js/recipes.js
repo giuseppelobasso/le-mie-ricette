@@ -33,12 +33,17 @@ const recipes = [
             "Assemblaggio: versa le fragole nella teglia di alluminio. Distribuisci l'impasto a cucchiaiate lasciando zone scoperte. Cuoci in forno statico a 180°C per circa 20 minuti fino a doratura.",
             "Servi tiepido con la ganache allo yogurt e qualche goccia di sciroppo di fragole."
         ],
-        tags: ["fragole", "dessert", "estivo", "forno"]
+        tags: ["fragole", "dessert", "estivo", "forno"],
+        notes: [
+            "**Finitura:** Servi tiepido con la ganache allo yogurt. Aggiungi qualche goccia di sciroppo di fragole al momento del servizio.",
+            "**Fragole molto mature:** riduci leggermente lo zucchero nella macerazione.",
+            "**Fondo troppo liquido:** prolunga la cottura di qualche minuto scoperto."
+        ]
     },
     {
         id: 2,
         title: "Crema Pasticcera",
-        category: "basi",
+        category: "contorno",
         time: 20,
         difficulty: "facile",
         servings: 6,
@@ -61,12 +66,20 @@ const recipes = [
             "Alla prima bolla o a 85°C con termometro, togli dal fuoco.",
             "Copri con pellicola a contatto per evitare la formazione della pellicina. Raffredda velocemente."
         ],
-        tags: ["crema", "base", "dolci", "classico"]
+        tags: ["crema", "base", "dolci", "classico"],
+        notes: [
+            "**Finitura:** Copri con pellicola a contatto per evitare la formazione della pellicina. Raffredda velocemente. Al momento dell'uso, mescola energicamente con la frusta fino a renderla morbida e cremosa.",
+            "**Amido di mais:** quantità minore per una crema più morbida, quantità maggiore per una crema più soda.",
+            "**Grumi:** se si formano, passa la crema al setaccio finché è ancora calda.",
+            "**Variante - Crema alla panna:** sostituisci fino a metà del latte con panna liquida. Il maggiore contenuto di grassi rende la crema più ricca e stabile.",
+            "**Variante - Crema al cioccolato:** sostituisci fino al 10% degli amidi con cacao amaro in polvere e aggiungi fino al 20% di cioccolato fuso, fuori dal fuoco.",
+            "**Modifica:** Abbassata quantità di amido rispetto alla ricetta originale."
+        ]
     },
     {
         id: 3,
         title: "Padellino Torinese",
-        category: "lievitati",
+        category: "antipasto",
         time: 120,
         difficulty: "media",
         servings: 4,
@@ -90,12 +103,15 @@ const recipes = [
             "Cuocere a 190°C per 14 minuti.",
             "Sfornare, lasciar raffreddare, e rigenerare nel forno a 230-250°C per 5-8 minuti."
         ],
-        tags: ["pizza", "lievitati", "padello", "torino"]
+        tags: ["pizza", "lievitati", "padello", "torino"],
+        notes: [
+            "**Calcoli per teglie tonde:** Per uno da 24: 12×12×x×3,14 = 240 → X = 240/12×12×3,14 = 0,53 (fattore moltiplicativo). Per uno da 28: 14×14×0,53×3,14 = 330g."
+        ]
     },
     {
         id: 4,
         title: "Pala Farcita",
-        category: "lievitati",
+        category: "antipasto",
         time: 150,
         difficulty: "media",
         servings: 4,
@@ -116,12 +132,13 @@ const recipes = [
             "Cuocere in forno preriscaldato a 220°C per circa 12 minuti.",
             "Farcire a piacere dopo la cottura."
         ],
-        tags: ["pizza", "lievitati", "pala", "lunga lievitazione"]
+        tags: ["pizza", "lievitati", "pala", "lunga lievitazione"],
+        notes: []
     },
     {
         id: 5,
         title: "Pan di Spagna",
-        category: "basi",
+        category: "contorno",
         time: 45,
         difficulty: "media",
         servings: 6,
@@ -145,7 +162,18 @@ const recipes = [
             "Cuoci in forno statico preriscaldato a 180°C per 30-35 minuti. Prova stecchino: deve uscire asciutto.",
             "Sforna, lascia intiepidire 5 minuti nella teglia, poi sforma su gratella e raffredda completamente."
         ],
-        tags: ["base", "torte", "classico", "forno"]
+        tags: ["base", "torte", "classico", "forno"],
+        notes: [
+            "**Finitura:** Sforna e lascia intiepidire 5 minuti nella teglia. Sforma e capovolgi su una gratella; fai raffreddare completamente. Prima dell'uso, elimina la crosta superficiale e laterale. Taglia i dischi solo quando il pan di spagna è completamente freddo.",
+            "**Uova:** devono essere a temperatura ambiente per inglobare aria al meglio. Pesale sempre: il peso varia con la grandezza.",
+            "**Montata:** velocità media per almeno 10 minuti garantisce bolle piccole e stabili; velocità alta subito rischia di smontare il composto.",
+            "**Farine:** incorporale in almeno 3 riprese con movimenti delicati ma decisi.",
+            "**Aromi:** aromatizza bene con vaniglia e limone per un buon profumo e gusto.",
+            "**Variante - Più compatto:** sostituisci una parte delle uova intere con tuorli aggiuntivi. I tuorli apportano più grassi e lecitina, rendendo la struttura più densa e umida. Ideale per torte farcite che devono reggere al taglio.",
+            "**Variante - Più delicato:** sostituisci una parte della farina con amido di mais o fecola di patate (fino al 50%). Gli amidi non formano glutine, quindi il risultato è una mollica più tenera e scioglievole.",
+            "**Gradi di montata:** Leggera (~3×, 5-7 min) = impasto fluido, bolle grandi; Media (~4×, 9-11 min) = equilibrio tra volume e stabilità; Pesante (~5×, 13-15 min) = massimo volume, bolle piccole e compatte.",
+            "**Rapporto uova/farine:** Montata leggera 1,1-1,3×; Montata media 1,3-1,6× (la nostra ricetta: 300g uova / 200g polveri = 1,5×); Montata pesante 1,6-2,0×."
+        ]
     },
     {
         id: 6,
@@ -174,12 +202,15 @@ const recipes = [
             "Lasciare riposare in frigo per almeno 1 ora prima di servire.",
             "Salsa: schiacciare la polpa di avocado con una forchetta. Aggiungere lo yogurt greco, il succo di lime e il sale. Mescolare fino ad ottenere una crema omogenea."
         ],
-        tags: ["salsa", "avocado", "fresco", "messicano"]
+        tags: ["salsa", "avocado", "fresco", "messicano"],
+        notes: [
+            "**Modifica:** Aggiungere un frutto al pico de gallo, probabilmente Mango."
+        ]
     },
     {
         id: 7,
         title: "Pizzette del Fornaio",
-        category: "lievitati",
+        category: "antipasto",
         time: 180,
         difficulty: "media",
         servings: 6,
@@ -201,12 +232,13 @@ const recipes = [
             "Cuocere in forno statico preriscaldato a 250°C per circa 10 minuti.",
             "Aggiungere la mozzarella ed eventuali altri ingredienti ed infornare per altri 5 minuti."
         ],
-        tags: ["pizza", "lievitati", "aperitivo", "forno"]
+        tags: ["pizza", "lievitati", "aperitivo", "forno"],
+        notes: []
     },
     {
         id: 8,
         title: "Shokupan",
-        category: "lievitati",
+        category: "primo",
         time: 360,
         difficulty: "difficile",
         servings: 4,
@@ -233,12 +265,13 @@ const recipes = [
             "Cuocere in forno statico preriscaldato a 170°C per 45 minuti, senza coperchio.",
             "Lasciar raffreddare completamente su una griglia prima di affettare."
         ],
-        tags: ["pane", "giapponese", "lievitati", "tangzhong"]
+        tags: ["pane", "giapponese", "lievitati", "tangzhong"],
+        notes: []
     },
     {
         id: 9,
         title: "Teglia Romana",
-        category: "lievitati",
+        category: "antipasto",
         time: 720,
         difficulty: "media",
         servings: 4,
@@ -259,7 +292,8 @@ const recipes = [
             "Cuocere a 250°C.",
             "Sfornare, lasciar raffreddare, condire e rigenerare in forno."
         ],
-        tags: ["pizza", "lievitati", "teglia", "roma"]
+        tags: ["pizza", "lievitati", "teglia", "roma"],
+        notes: []
     },
     {
         id: 10,
@@ -291,7 +325,14 @@ const recipes = [
             "Spolvera con cacao amaro oppure decora con panna montata, gocce di cioccolato o frutta candita.",
             "Lascia riposare in frigorifero almeno 4 ore prima di servire."
         ],
-        tags: ["dolce", "alchermes", "crema", "classico"]
+        tags: ["dolce", "alchermes", "crema", "classico"],
+        notes: [
+            "**Bagna:** l'alchermes può essere dosato puro per un gusto più deciso oppure allungato per una zuppa inglese più equilibrata. La bagna deve essere abbondante.",
+            "**Struttura:** il pan di spagna deve essere ben asciutto e freddo, così assorbe la bagna senza sfaldarsi.",
+            "**Riposo:** il passaggio in frigorifero compatta gli strati e migliora il taglio.",
+            "**Variante monoporzione:** monta la zuppa inglese in bicchieri alternando cubi di pan di spagna, bagna e crema.",
+            "**Variante torta:** usa uno stampo a cerchio e compattala bene con pellicola o acetato per un taglio più pulito."
+        ]
     }
 ];
 
