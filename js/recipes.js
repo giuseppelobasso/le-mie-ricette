@@ -351,7 +351,7 @@ const recipes = [
         instructions: [
             "Lessare le patate con la buccia, sbucciarle e schiacciarle con lo schiacciapatate.",
             "Far raffreddare, poi aggiungere farina, uovo e sale. Impastare fino a ottenere un panetto liscio.",
-            "Formare i gnocchi: tagliare pezzi di impasto e rotolarli a "serpentelli", poi tagliare a pezzi di 2cm.",
+            "Formare i gnocchi: tagliare pezzi di impasto e rotolarli a serpentelli, poi tagliare a pezzi di 2cm.",
             "Accennare ogni gnocco con la forchetta per creare le scanalature.",
             "Cuocere gli gnocchi in acqua bollente salata. Scolarli appena vengono a galla.",
             "Mescolare gli gnocchi con il sugo di pomodoro, la mozzarella a dadini e il basilico.",
