@@ -333,6 +333,42 @@ const recipes = [
             "**Variante monoporzione:** monta la zuppa inglese in bicchieri alternando cubi di pan di spagna, bagna e crema.",
             "**Variante torta:** usa uno stampo a cerchio e compattala bene con pellicola o acetato per un taglio più pulito."
         ]
+    },
+    {
+        id: 11,
+        title: "Focaccia Barese",
+        category: "lievitati",
+        time: 300,
+        difficulty: "media",
+        servings: 4,
+        image: "../images/focaccia_barese.jpeg",
+        description: "Focaccia barese con pomodorini e origano. Soffice all'interno e croccante all'esterno",
+        ingredients: [
+            "350g di Farina Caputo Aria",
+            "150g di semola rimacinata",
+            "150g di patate lesse",
+            "350g di acqua",
+            "25g di olio EVO",
+            "12g di sale",
+            "6g di lievito di birra fresco",
+            "Pelati",
+            "Origano",
+            "Olive"
+        ],
+        instructions: [
+            "Porta la farina Aria ai bordi della planetaria, unisci al centro acqua e semola e lascia riposare per 20 minuti",
+            "Aggiungi lievito ed impasta (con planetaria o a mano) raccogliendo gradualmente la farina. Aggiungi patate schiacciate e sale. L'impasto deve risultare molto soffice e umido.",
+            "Lascia riposare in frigo effettuando pieghe ed unisci l' olio a mano.",
+            "Fai puntare l' impasto in frigo per almeno 4 ore",
+            "Staglia l' impasto in due panetti da circa 500 grammi l' uno e lascia lievitare nella tegli unta e leggermente sporcata di semola fino a quando non la vedi quasi riempire la teglia",
+            "Condisci con i pelati (lassati scolare un po’ dall’acqua in eccesso) e olive.",
+            "Cuoci in forno statico preriscaldato a 250°C per 10-15 minuti",
+            "Sforna, sforma e lascia intiepidire leggermente, ripassa in forno per far diventare croccante se necessario"
+        ],
+        tags: ["pizza", "lievitati"],
+        notes: [
+            "**Stampo:** Ho usato una teglia da 28cm tonda con un panetto da 550 grammi, esce mediamente alta.",
+        ]
     }
 ];
 
