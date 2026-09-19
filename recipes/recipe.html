@@ -137,20 +137,20 @@
                     </ol>
                 </div>
                 
+                ${recipe.notes && recipe.notes.length > 0 ? `
+                    <div class="recipe-page-section">
+                        <h3>Note e Varianti</h3>
+                        <div class="notes-list">
+                            ${recipe.notes.map(note => `<p class="note-item">${note.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</p>`).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+                
                 ${recipe.tags.length > 0 ? `
                     <div class="recipe-page-section">
                         <h3>Tags</h3>
                         <div class="filter-buttons">
                             ${recipe.tags.map(tag => `<span class="filter-btn">${tag}</span>`).join('')}
-                        </div>
-                    </div>
-                ` : ''}
-                
-                ${recipe.notes && recipe.notes.length > 0 ? `
-                    <div class="recipe-page-section">
-                        <h3>Note e Varianti</h3>
-                        <div class="notes-list">
-                            ${recipe.notes.map(note => `<p class="note-item">${note}</p>`).join('')}
                         </div>
                     </div>
                 ` : ''}
