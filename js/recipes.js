@@ -341,7 +341,7 @@ const recipes = [
         time: 300,
         difficulty: "media",
         servings: 4,
-        image: "../images/focaccia_barese.jpeg",
+        image: "images/focaccia_barese.jpeg",
         description: "Focaccia barese con pomodorini e origano. Soffice all'interno e croccante all'esterno",
         ingredients: [
             "350g di Farina Caputo Aria",

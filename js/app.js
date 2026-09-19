@@ -106,9 +106,15 @@ function renderRecipes() {
     // Render cards
     recipesGrid.innerHTML = filteredRecipes.map(recipe => {
         const isImage = /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(recipe.image);
-        const imageContent = isImage
-            ? `<img src="${recipe.image}" alt="${recipe.title}" loading="lazy">`
-            : recipe.image;
+        let imageContent;
+        if (isImage) {
+            const imgSrc = recipe.image.startsWith('/') || recipe.image.startsWith('http')
+                ? recipe.image
+                : recipe.image.replace(/^\.\.\/?/, '');
+            imageContent = `<img src="${imgSrc}" alt="${recipe.title}" loading="lazy">`;
+        } else {
+            imageContent = recipe.image;
+        }
         return `
         <article class="recipe-card" data-id="${recipe.id}">
             <div class="recipe-card-image">${imageContent}</div>
