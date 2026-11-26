@@ -100,7 +100,7 @@ const recipes = [
             "Stagliare a panetti da 240g molto stretti e lasciare lievitare per 3 ore a temperatura ambiente direttamente in teglia senza stendere.",
             "Mettere olio sotto e sopra durante la lievitazione.",
             "Fare un buco al centro prima di infornare.",
-            "Cuocere a 190°C per 14 minuti.",
+            "Cuocere a 250°C per 14 minuti.",
             "Sfornare, lasciar raffreddare, e rigenerare nel forno a 230-250°C per 5-8 minuti."
         ],
         tags: ["pizza", "lievitati", "padello", "torino"],
@@ -129,7 +129,7 @@ const recipes = [
             "Lasciare lievitare in frigo per 12-24 ore.",
             "Portare a temperatura ambiente e lasciar lievitare per 3 ore.",
             "Stendere l'impasto sulla teglia della pala.",
-            "Cuocere in forno preriscaldato a 220°C per circa 12 minuti.",
+            "Cuocere in forno preriscaldato a 250°C per circa 12 minuti.",
             "Farcire a piacere dopo la cottura."
         ],
         tags: ["pizza", "lievitati", "pala", "lunga lievitazione"],
@@ -368,6 +368,54 @@ const recipes = [
         tags: ["pizza", "lievitati"],
         notes: [
             "**Stampo:** Ho usato una teglia da 28cm tonda con un panetto da 550 grammi, esce mediamente alta. Stampi che conducono poco o male il calore lasciano il fondo unto e non croccante.",
+        ]
+    },
+    {
+        id: 12,
+        title: "Pasta Frolla",
+        category: "base",
+        time: 20,
+        difficulty: "facile",
+        servings: 8,
+        image: "🥧",
+        description: "Pasta frolla classica senza lievito, ideale per crostate e biscotti. Almeno 2-3 ore di riposo in frigorifero.",
+        ingredients: [
+            "200g di burro",
+            "100g di zucchero semolato",
+            "80g di zucchero a velo",
+            "4 tuorli grandi (circa 75-80g)",
+            "400g di farina 00",
+            "Scorza di limone",
+            "1 pizzico di sale"
+        ],
+        instructions: [
+            "Togliere il burro dal frigorifero 5 minuti prima di preparare la frolla, pesarlo, tagliarlo a cubetti e unirlo allo zucchero semolato, allo zucchero a velo, alla scorza di limone grattugiata e al pizzico di sale.",
+            "Impastare in planetaria con la foglia o il gancio, oppure a mano su una spianatoia o in una ciotola, fino ad omogeneizzare il tutto senza far perdere consistenza al burro.",
+            "Aggiungere i tuorli al composto e continuare a mescolare fino a incorporarli completamente.",
+            "Infine aggiungere la farina e impastare fino a completo assorbimento, ottenendo la classica consistenza della frolla.",
+            "Togliere la frolla dalla planetaria o dalla ciotola e lavorarla per pochi secondi fino a formare un panetto rettangolare e non troppo spesso, così si raffredderà più velocemente.",
+            "Avvolgere il panetto in un canovaccio pulito o nella pellicola trasparente e mettere in frigorifero a riposare per almeno 2-3 ore (oppure tutta la notte).",
+            "Quando servirà per preparare il dolce, togliere dal frigorifero, tagliare a pezzetti e lavorare in planetaria o a mano per circa 1-2 minuti per ammorbidirla leggermente e renderla elastica prima di stenderla con il mattarello."
+        ],
+        tags: ["frolla", "base", "dolci"],
+        notes: []
+    },
+    {
+        id: 13,
+        title: "Pizza Baciata",
+        category: "lievitati",
+        time: 0,
+        difficulty: "media",
+        servings: 4,
+        image: "🍕",
+        description: "Ricetta da completare: al momento contiene solo appunti sulle proporzioni dei panetti.",
+        ingredients: [],
+        instructions: [
+            "Ricetta da scrivere."
+        ],
+        tags: ["pizza", "lievitati"],
+        notes: [
+            "**Teglia 40×30:** Un panetto di 600g per una teglia 40×30 è troppo grande; il coperchio deve essere circa il 20% in meno della base."
         ]
     }
 ];
